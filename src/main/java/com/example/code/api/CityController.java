@@ -27,8 +27,11 @@ public class CityController {
 
     // server/cities/part?part="abc"
     @GetMapping("/part")
-    ResponseEntity<List<ResponseCityDTO>> getCitiesByPartOfName(@RequestParam String part) {
+    public ResponseEntity<List<ResponseCityDTO>> getCitiesByPartOfName(@RequestParam String part) {
         return ResponseEntity.ok().body(cityService.getCitiesByPartOfName(part));
     }
+
+    @PostMapping
+
 
 }
