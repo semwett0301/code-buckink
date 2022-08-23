@@ -30,5 +30,4 @@ public class CityController {
     public ResponseEntity<List<ResponseCityDTO>> getCitiesByPartOfName(@RequestParam String part) {
         return ResponseEntity.ok().body(cityService.getCitiesByPartOfName(part));
     }
-
 }

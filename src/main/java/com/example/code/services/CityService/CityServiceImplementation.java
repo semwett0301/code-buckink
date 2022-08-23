@@ -28,7 +28,7 @@ public class CityServiceImplementation implements CityService{
     @Override
     public List<ResponseCityDTO> getCitiesByPartOfName(String part) {
         return  getAllCities().stream()
-                .filter(elem -> elem.getName().contains(part))
+                .filter(elem -> elem.getName().toLowerCase().contains(part.toLowerCase()))
                 .limit(5)
                 .collect(Collectors.toList());
     }
